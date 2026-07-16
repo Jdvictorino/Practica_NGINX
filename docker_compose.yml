@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: servidor-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/usr/share/nginx/htmldoc
+    restart: unless-stopped
